@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Majeed & My Services</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: bounceIn 1s ease-out;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.8;
+        }
+
+        /* Sections */
+        section {
+            padding: 40px 20px;
+            background-color: white;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        section p {
+            font-size: 1.1em;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Buttons */
+        .button {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 25px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 40px auto;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Services Section */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+            padding: 20px;
+        }
+
+        .service {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+        }
+
+        .service h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 1.1em;
+        }
+
+        /* Language Switch Button */
+        .lang-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ff9800;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <button class="lang-btn" onclick="toggleLanguage()">العربية</button>
+
+    <header>
+        <h1 id="title">About Majeed</h1>
+        <p id="subtitle">Freelancer | Web Developer | Business Card Designer | Translator</p>
+    </header>
+
+    <section>
+        <h2 id="who-title">Who I Am</h2>
+        <p id="who-text">I am a passionate freelancer offering web development, professional business card design, and translation services. Let's work together!</p>
+    </section>
+
+    <a href="#services" class="button" id="services-btn">View My Services</a>
+
+    <section id="services" class="services-container">
+        <div class="service">
+            <h3 id="service1-title">Web Development</h3>
+            <p id="service1-text">Creating modern, responsive websites for businesses and individuals.</p>
+        </div>
+        <div class="service">
+            <h3 id="service2-title">Professional Business Cards</h3>
+            <p id="service2-text">Designing high-quality, professional business cards to make a great impression.</p>
+        </div>
+        <div class="service">
+            <h3 id="service3-title">Translation</h3>
+            <p id="service3-text">English-Arabic translations with accuracy and quality.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Majeed. All Rights Reserved.</p>
+        <p id="contact-text">Contact: edrsonmajeed@gmail.com</p>
+    </footer>
+
+    <script>
+        let isEnglish = true;
+
+        function toggleLanguage() {
+            if (isEnglish) {
+                document.getElementById("title").innerText ="عني";
+                document.getElementById("subtitle").innerText = "مستقل | مطور ويب | مصمم بطاقات أعمال | مترجم";
+                document.getElementById("who-title").innerText = "من أنا";
+                document.getElementById("who-text").innerText = "أنا مستقل متحمس أقدم خدمات تطوير الويب، وتصميم بطاقات العمل الاحترافية، وخدمات الترجمة. دعونا نعمل معًا!";
+                document.getElementById("services-btn").innerText = "عرض خدماتي";
+                document.getElementById("service1-title").innerText = "تطوير الويب";
+                document.getElementById("service1-text").innerText = "إنشاء مواقع ويب حديثة ومتجاوبة للشركات والأفراد.";
+                document.getElementById("service2-title").innerText = "بطاقات العمل الاحترافية";
+                document.getElementById("service2-text").innerText = "تصميم بطاقات عمل عالية الجودة واحترافية لترك انطباع رائع.";
+                document.getElementById("service3-title").innerText = "الترجمة";
+                document.getElementById("service3-text").innerText = "ترجمات دقيقة واحترافية بين العربية والإنجليزية.";
+                document.getElementById("contact-text").innerText = "للتواصل: edrsonmajeed@gmail.com";
+                document.querySelector(".lang-btn").innerText = "English";
+            } else {
+                document.getElementById("title").innerText = "About Majeed";
+                document.getElementById("subtitle").innerText = "Freelancer | Web Developer | Business Card Designer | Translator";
+                document.getElementById("who-title").innerText = "Who I Am";
+                document.getElementById("who-text").innerText = "I am a passionate freelancer offering web development, professional business card design, and translation services. Let's work together!";
+                document.getElementById("services-btn").innerText = "View My Services";
+                document.getElementById("service1-title").innerText = "Web Development";
+                document.getElementById("service1-text").innerText = "Creating modern, responsive websites for businesses and individuals.";
+                document.getElementById("service2-title").innerText = "Professional Business Cards";
+                document.getElementById("service2-text").innerText = "Designing high-quality, professional business cards to make a great impression.";
+                document.getElementById("service3-title").innerText = "Translation";
+                document.getElementById("service3-text").innerText = "English-Arabic translations with accuracy and quality.";
+                document.getElementById("contact-text").innerText = "Contact: edrsonmajeed@gmail.com";
+                document.querySelector(".lang-btn").innerText = "العربية";
+            }
+            isEnglish = !isEnglish;
+        }
+    </script>
+</body>
+</html>
